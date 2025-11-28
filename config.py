@@ -11,7 +11,6 @@
 DATABASE_CONFIG = {
     "host": "localhost",          # OK - endereço do servidor
     "user": "admin",              # OK - nome de usuário
-    "password": "senha123456",    # PROBLEMA! Senha exposta no código
     "database": "producao"        # OK - nome do banco
 }
 # POR QUE É PERIGOSO:
@@ -37,23 +36,6 @@ API_KEY = "sk_live_1234567890abcdefghijklmnop"
 # - Tem o padrão "sk_live_" (conhecido da Stripe)
 # - Comprimento típico de API key
 
-# ------------------------------------------
-# PROBLEMA 3: Secret Key da AWS Exposta
-# ------------------------------------------
-AWS_SECRET = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
-# PROBLEMA GRAVÍSSIMO!
-#
-# O QUE É: Chave secreta da Amazon Web Services
-# POR QUE É PERIGOSO:
-# - Com essa chave, hackers podem:
-#   → Criar servidores na sua conta AWS
-#   → Gerar cobranças milionárias
-#   → Acessar todos os seus dados na nuvem
-#   → Deletar seus serviços
-# 
-# O GITLEAKS VAI DETECTAR PORQUE:
-# - Formato típico de AWS Secret Key
-# - Padrão de caracteres conhecido
 
 # ------------------------------------------
 # Esta linha é segura (apenas imprime mensagem)

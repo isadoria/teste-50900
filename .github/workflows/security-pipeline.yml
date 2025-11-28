@@ -3,7 +3,7 @@
 # ==========================================
 # Esta pipeline garante que código com senhas
 # ou secrets NUNCA chegue à produção!
-# ==========================================
+# ==========================================-
 
 name: DevSecOps Security Pipeline
 
